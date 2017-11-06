@@ -1,8 +1,8 @@
 package com.company;
 
 public class Compute {
-    ObligatoryData obligatoryData;
-    Adress adress;
+    IpV4 ipV4;
+    Address adress;
 
 
 }
