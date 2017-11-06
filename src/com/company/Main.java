@@ -21,5 +21,10 @@ public class Main {
             System.out.print(binarySubmask[i] + " ");
         }
 
+        System.out.println();
+
+        Network network = new Network();
+        network.getAddressFromIpv4AndSubNet(ipV4, subNetMask);
+
     }
 }

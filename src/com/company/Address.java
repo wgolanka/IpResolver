@@ -27,35 +27,17 @@ public class Address {
 
         for(int k = 0; k < onePiece.length - 1; k++){
             binary[k] = Long.valueOf(Long.toBinaryString(Long.valueOf(onePiece[k])));
-            System.out.print(binary[k] + " ");
+            System.out.print(binary[k]);
             if(k % 4 == 0){
                 System.out.print("  ");
             }
         }
-
-
-
-//        String addressWithoutDots = address.replaceAll("\\.", "");
-//        System.out.println("address without dots " + addressWithoutDots);
-//
-//        String number = Long.toBinaryString(Long.valueOf(addressWithoutDots));
-////        String number = Integer.toBinaryString(Integer.valueOf(addressWithoutDots));
-//        System.out.println("\n----");
-//        System.out.println(number);
-//        System.out.println("----");
-//
-//        int[] binary = new int[number.length()];
-//
-//        for(int k = 0; k < binary.length - 1; k++){
-//            binary[k] = Integer.valueOf(number.substring(k, k+1));
-//            System.out.print(binary[k]);
-//            if(k % 4 == 0){
-//                System.out.print("  ");
-//            }
-//        }
-//        System.out.println("\n----------------");
-
         return binary;
+    }
+
+    long[] toDigitsArray(long[] binaryNumbers){
+        return null;
+
     }
 
 }

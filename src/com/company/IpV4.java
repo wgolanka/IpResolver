@@ -2,7 +2,6 @@ package com.company;
 
 public class IpV4 extends Address
 {
-    String ipV4;
 
     public IpV4(){}
 
@@ -17,5 +16,7 @@ public class IpV4 extends Address
         return super.getAddress();
     }
 
-
+    public void setIpV4(String ipV4) {
+        this.address= ipV4;
+    }
 }
