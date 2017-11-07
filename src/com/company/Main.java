@@ -10,5 +10,6 @@ public class Main {
         network.setAddress(network.getAddressFromIpv4AndSubNet(ipV4, subNetMask));
         System.out.print(network.toString());
 
+        //TODO compute broadcast address
     }
 }
