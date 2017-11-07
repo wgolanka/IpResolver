@@ -3,8 +3,6 @@ package com.company;
 
 public class Network extends Address{
 
-
-
      Network() {
     }
 
@@ -20,15 +18,19 @@ public class Network extends Address{
 
     String getAddressFromIpv4AndSubNet(IpV4 ipV4, SubNetMask subNetMask){
         String[] ipAddress = ipV4.address.split("\\.");
-        String[] subNetAdress = subNetMask.address.split("\\.");
-        String[] networkAddress = new String[ipAddress.length];
-        String network = "";
-        for(int i = 0; i < ipAddress.length; i++){
-            networkAddress[i] = String.valueOf(
-                    Integer.valueOf(ipAddress[i]) & Integer.valueOf(subNetAdress[i]));
-            System.out.print(networkAddress[i] + ".");
-            network += networkAddress[i] + ".";
+        String[] subNetAddress = subNetMask.address.split("\\.");
+
+        StringBuilder nAddress = new StringBuilder();
+        for(int i = 0; i < ipAddress.length && i < subNetAddress.length; i++){
+
+            nAddress.append(String.valueOf(
+                    Integer.valueOf(ipAddress[i]) & Integer.valueOf(subNetAddress[i])));
+
+            nAddress.append(".");
         }
-        return network;
+        nAddress.deleteCharAt(nAddress.length() - 1);
+
+        System.out.println(nAddress);
+        return nAddress.toString();
     }
 }
